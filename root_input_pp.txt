@@ -1,0 +1,43 @@
+# CROSS SECTION(S) (pb):
+xsec    = [4.141660e-03,7.466200e+00]
+
+# Plotting options:
+JOB     = 'histos-pp'
+PDF     = ['a ax > a ax','q q > a nu nu']
+scale   = True
+cuts    = False
+setLog  = False
+filled  = False
+stacked = False
+data    = False
+LUMI    = False
+
+# EVENT SAMPLE INPUT
+Nevt    = 10000
+Nmax    = 10000
+EBEAM1 = 7000
+EBEAM2  = 7000
+SQRTS   = 14000
+
+FILES   = ['new_0aaxaax-pp.lhe','new_0ppanunu-pp.lhe']
+
+# Luminosity
+lumi    = 150
+
+# Particles of interest
+IDS     = [2212, 22, 9000005, 12, -12, 14, -14, 16, -16]
+
+# Kinematical Cuts if cuts == True:
+INVMCUTUPPER = 14000.0 # (NO CUT 9999.0 )
+INVMCUTLOWER = 10.0 # (NO CUT 0.0)
+
+PTPAIRCUTUPPER = 9999.0 # (NO CUT 0.0 )
+PTPAIRCUTLOWER = 0.0 # (NO CUT 0.0)
+
+ETACUT = 2.5  # NO CUT: INNER TURE, ETACUT = 20
+ETAPAIRCUT = 5000. # (NO CUT 100.)
+INNER = True # (TRUE: -x < y < +x ; FALSE: y < -x AND y > +x)
+
+PTCUTUPPER = 9999.0 # (NO CUT 9999.0 )
+PTCUTLOWER = 15.0 # (NO CUT 0.0)
+
