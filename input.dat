@@ -1,0 +1,45 @@
+# Input LHE files and metadata
+files:
+  - path: "ALP_a_ax_t_t~_pp_boosted.lhe"
+    label: "aaxttbar"
+    cross_section: 7.140E-4   # pb
+  - path: "ALP_a_a_t_t~_pp_boosted.lhe"
+    label: "aattbar"
+    cross_section: 0.000175  # pb
+
+# Plot settings
+plots:
+  normalize_by_cross_section: true
+  log_scale: false             # Y-axis log scale for 1D
+  log_x: false                 # X-axis log scale (optional)
+  transparent: false           # Transparent background for PNGs
+  dpi: 300                     # DPI for exported PNGs
+  stacked: false               # Stack histos (THStack)
+  colors: [632, 600]           # ROOT color codes
+  integrated_luminosity: false # Normalize per integrated lumi
+  lumi: 300                    # fb^-1
+  add_dummy_data: false        # Overlay fake data points
+  dummy_data_config:
+    distribution: "gaussian"
+    params:
+      mean: 50.0
+      sigma: 10.0
+    n_points: 1000
+
+# Kinematical cuts
+apply_cuts: true
+cuts:
+  - function: "Pt()"
+    mode: "single"
+    id: [6, -6]
+    min: 0
+    max: 7000
+  - function: "Eta()"
+    mode: "single"
+    id: [6, -6]
+    min: -2.5
+    max: +2.5
+
+# Particle selection for plots
+particles: 
+  include: [6, -6, 2212]

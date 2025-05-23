@@ -1,0 +1,36 @@
+style:
+  palette: "kRainBow"
+
+  common_commands:
+    - "gStyle->SetTextFont(42)"
+    - "gStyle->SetLegendFont(42)"
+    - "gStyle->SetPadLeftMargin(0.12)"
+    - "gStyle->SetPadRightMargin(0.12)"
+    - "gStyle->SetPadTopMargin(0.12)"
+    - "gStyle->SetPadBottomMargin(0.12)"
+    - "gStyle->SetFillColor(0)"
+    - "gStyle->SetFrameFillColor(0)"
+    - "gStyle->SetCanvasColor(0)"
+    - "gStyle->SetPadColor(0)"
+    - "gStyle->SetStatColor(0)"
+    - 'gStyle->SetLabelSize(0.04, "X")'
+    - 'gStyle->SetLabelSize(0.04, "Y")'
+    - 'gStyle->SetLabelSize(0.04, "Z")'
+    - 'gStyle->SetTitleSize(0.045, "X")'
+    - 'gStyle->SetTitleSize(0.045, "Y")'
+    - 'gStyle->SetTitleSize(0.045, "Z")'
+    - 'gStyle->SetTitleOffset(0.5, "X")'
+    - 'gStyle->SetTitleOffset(0.5, "Y")'
+    - 'gStyle->SetOptStat(0)'
+
+  histogram1D_commands:
+    - "gStyle->SetStatY(0.9)"
+    - "gStyle->SetStatX(0.9)"
+
+  histogram2D_commands:
+    - "gStyle->SetTitleOffset(0.5, 'X')"
+    - "gStyle->SetTitleOffset(0.5, 'Y')"
+    - "gStyle->SetPaintTextFormat('4.2f')"
+    - "gStyle->SetNumberContours(99)"
+    - "gPad->SetFixedAspectRatio(1)"
+
