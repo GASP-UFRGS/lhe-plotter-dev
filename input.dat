@@ -1,15 +1,15 @@
 # Input LHE files and metadata
 files:
-  - path: "ALP_a_ax_t_t~_pp_boosted.lhe"
-    label: "aaxttbar"
-    cross_section: 7.140E-4   # pb
-  - path: "ALP_a_a_t_t~_pp_boosted.lhe"
-    label: "aattbar"
-    cross_section: 0.000175  # pb
+  - path: "<lhe-file-1>"
+    label: "<tag-1>"
+    cross_section: <xsec-1>   # pb
+  - path: "<lhe-file-2>"
+    label: "<tag-2>"
+    cross_section: <xsec-2>  # pb
 
 # Plot settings
 plots:
-  normalize_by_cross_section: true
+  normalize_by_cross_section: false
   log_scale: false             # Y-axis log scale for 1D
   log_x: false                 # X-axis log scale (optional)
   transparent: false           # Transparent background for PNGs
@@ -27,7 +27,7 @@ plots:
     n_points: 1000
 
 # Kinematical cuts
-apply_cuts: true
+apply_cuts: false
 cuts:
   - function: "Pt()"
     mode: "single"

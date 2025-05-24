@@ -1,0 +1,11 @@
+style:
+  palette: "kRainBow"
+  common_commands:
+    - "gStyle->SetOptStat(0)"
+    - "gStyle->SetCanvasColor(0)"
+    - "gStyle->SetPadColor(0)"
+    - "gStyle->SetFrameFillColor(0)"
+  histogram1D_commands:
+    - "h->SetLineWidth(2)"
+    - "h->SetFillColor(0)"
+    - "h->SetFillStyle(0)"
