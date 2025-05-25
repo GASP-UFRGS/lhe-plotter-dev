@@ -13,10 +13,10 @@ main_cli()
 
 import os
 import argparse
-from . import utils, process, histo, plotter_from_root
+from . import utils, process, histo, plotter
 import subprocess
-from .lhe_plotter import run_lhe_plotter, run_parallel_batch
-from .lhe_plotter import load_histogram_definitions
+from .parser import run_lhe_plotter, run_parallel_batch
+from .parser import load_histogram_definitions
 
 def main():
     """
@@ -28,7 +28,7 @@ def main():
     - Running in single-file or batch mode
     - Applying event cuts and weights
     - Normalizing histograms using cross sections and luminosity
-    - Automatically plotting histograms with the `plotter_from_root` module
+    - Automatically plotting histograms with the `plotter` module
 
     The command-line options allow configuration of input files, histogram definitions,
     output directories, verbosity, and plotting behavior.
@@ -80,12 +80,12 @@ def main():
         parser.print_help()
 
     if args.auto_plot:
-        print("Auto-plotting enabled! Launching plotter_from_root.py...")
+        print("Auto-plotting enabled! Launching plotter.py...")
         script_dir = os.path.dirname(os.path.realpath(__file__))
-        plotter_path = os.path.join(script_dir, "plotter_from_root.py")
+        plotter_path = os.path.join(script_dir, "plotter.py")
 
         plot_cmd = [
-            "python3", "-m", "lhe_plotter.plotter_from_root",
+            "python3", "-m", "lhe_plotter.plotter",
             "--input", final_output_path,
             "--config", args.input_file,
             "--outdir", final_outdir

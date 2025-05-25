@@ -27,7 +27,7 @@ Command Line Interface
 ----------------------
 Supports batch and single-file execution:
 
-    python plotter_from_root.py --input FILE.root --config input.yaml --histos histograms.yaml --outdir plots/
+    python plotter.py --input FILE.root --config input.yaml --histos histograms.yaml --outdir plots/
 
 Requires
 --------
@@ -406,7 +406,7 @@ def plot_histograms_from_root(root_file_path, input_yaml="input.dat", input_hist
 
 def main_cli():
     """
-    Entry point when plotter_from_root.py is run as a module.
+    Entry point when plotter.py is run as a module.
     """
     parser = argparse.ArgumentParser(description="Standalone ROOT histogram plotter.")
     parser.add_argument("--input", required=True, help="Input ROOT file")

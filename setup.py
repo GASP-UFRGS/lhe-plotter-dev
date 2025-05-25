@@ -4,16 +4,14 @@ setup(
     name="lhe-plotter",
     version="0.1",
     description="LHE Plotter: ROOT histogram analysis for LHE files",
-    author="Your Name",
-    author_email="your.email@example.com",
+    author="diemort",
+    author_email="cms@ufrgs.br",
     packages=find_packages(),
-    install_requires=[
-        # Optional: leave empty if requirements are managed via requirements.txt
-    ],
+    install_requires=[],
     entry_points={
         "console_scripts": [
-            "lhe-plotter = lhe_plotter.__main__:main",
-            "lhe-plotter-plot = lhe_plotter.plotter_from_root:main",
+            "lhe-parser  = lhe_plotter.__main__:main",
+            "lhe-plotter = lhe_plotter.plotter:main",
         ]
     },
     include_package_data=True,

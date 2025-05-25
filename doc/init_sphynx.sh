@@ -92,12 +92,12 @@ API Reference
    :undoc-members:
    :show-inheritance:
 
-.. automodule:: lhe_plotter.plotter_from_root
+.. automodule:: lhe_plotter.plotter
    :members:
    :undoc-members:
    :show-inheritance:
 
-.. automodule:: lhe_plotter.lhe_plotter
+.. automodule:: lhe_plotter.parser
    :members:
    :undoc-members:
    :show-inheritance:

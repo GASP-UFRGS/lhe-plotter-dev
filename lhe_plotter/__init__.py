@@ -26,13 +26,13 @@ from .process import (
     pass_cuts,
 )
 
-from .lhe_plotter import (
+from .parser import (
     run_lhe_plotter,
     run_parallel_batch,
     load_histogram_definitions
 )
 
-from .plotter_from_root import (
+from .plotter import (
     plot_histograms_from_root,
 )
 

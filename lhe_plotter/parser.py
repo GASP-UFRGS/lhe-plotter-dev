@@ -1,5 +1,5 @@
 """
-Script for processing LHE (Les Houches Event) files, applying cuts,
+Script for parsing LHE (Les Houches Event) files, applying cuts,
 filling histograms, normalizing them, and optionally plotting results.
 
 Main features:
@@ -9,7 +9,7 @@ Main features:
 - Computes weighted histograms
 - Outputs results in ROOT format
 - Supports parallel batch processing
-- Optional plotting via plotter_from_root.py
+- Optional plotting via plotter.py
 """
 
 from .utils import *
