@@ -1,11 +1,22 @@
 #!/bin/bash
-set -e
 
 echo "Running LHE plotter test..."
-python3 ../lhe-plotter.py \
-  --config input_test.dat \
-  --histos histograms_test.yaml \
-  --output output_test.root \
+
+# Activate virtual environment if it exists
+if [ -f "./lhe-env/bin/activate" ]; then
+  source ./lhe-env/bin/activate
+fi
+
+# Define input and output paths
+INPUT_FILE="input_test.dat"
+HISTO_FILE="histograms_test.yaml"
+OUTDIR="test_output"
+
+# Call the Python module as a script using -m
+python3 -m lhe_plotter \
+  --config "$INPUT_FILE" \
+  --histos "$HISTO_FILE" \
+  --outdir "$OUTDIR" \
   --auto-plot \
-  --outdir test_output \
+  --verbose
 

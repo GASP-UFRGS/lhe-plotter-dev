@@ -1,6 +1,5 @@
 PyYAML
 numpy
 tqdm
-uproot
 pylhe
 tabulate
