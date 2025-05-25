@@ -1,0 +1,45 @@
+# Input LHE files and metadata
+files:
+  - path: "<lhe-file-1>"
+    label: "<tag-1>"
+    cross_section: <xsec-1>   # pb
+  - path: "<lhe-file-2>"
+    label: "<tag-2>"
+    cross_section: <xsec-2>  # pb
+
+# Plot settings
+plots:
+  normalize_by_cross_section: false
+  log_scale: false             # Y-axis log scale for 1D
+  log_x: false                 # X-axis log scale (optional)
+  transparent: false           # Transparent background for PNGs
+  dpi: 300                     # DPI for exported PNGs
+  stacked: false               # Stack histos (THStack)
+  colors: [632, 600]           # ROOT color codes
+  integrated_luminosity: false # Normalize per integrated lumi
+  lumi: 300                    # fb^-1
+  add_dummy_data: false        # Overlay fake data points
+  dummy_data_config:
+    distribution: "gaussian"
+    params:
+      mean: 50.0
+      sigma: 10.0
+    n_points: 1000
+
+# Kinematical cuts
+apply_cuts: false
+cuts:
+  - function: "Pt()"
+    mode: "single"
+    id: [6, -6]
+    min: 0
+    max: 7000
+  - function: "Eta()"
+    mode: "single"
+    id: [6, -6]
+    min: -2.5
+    max: +2.5
+
+# Particle selection for plots
+particles: 
+  include: [6, -6, 2212]

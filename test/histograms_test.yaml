@@ -1,0 +1,10 @@
+histograms:
+  - name: pt_single_top
+    id: [6]
+    bins: 50
+    xmin: 0
+    xmax: 500
+    function: X.Pt()
+    mode: single
+    xlabel: "p_{T}(t)"
+    unit: "GeV"

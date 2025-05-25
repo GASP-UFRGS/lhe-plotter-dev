@@ -1,0 +1,120 @@
+# Histogram definitions
+histograms:
+  - name: "invm_pair_tops"
+    function: "(X+Y).M()"
+    mode: pair
+    id: [6,-6]
+    bins: 50
+    xmin: 0
+    xmax: 14000
+    xlabel: "M(t#bar{t})"
+    unit: "GeV"
+  - name: "pt_single_jets"
+    function: "X.Pt()"
+    mode: single
+    id: [2,4]
+    bins: 50
+    xmin: 0
+    xmax: 200
+    xlabel: "p_{T}(j)"
+    unit: "GeV"
+  - name: "eta_single_jets"
+    function: "X.Eta()"
+    mode: single
+    id: [2,4]
+    bins: 40
+    xmin: -10
+    xmax: 10
+    xlabel: "eta(j)"
+    unit: "GeV"
+  - name: "pt_single_tops"
+    function: "X.Pt()"
+    mode: single
+    id: [6,-6]
+    bins: 50
+    xmin: 0
+    xmax: 200
+    xlabel: "eta_{T}(j)"
+    unit: "GeV"
+  - name: "eta_single_tops"
+    function: "X.Eta()"
+    mode: single
+    id: [6,-6]
+    bins: 40
+    xmin: -10
+    xmax: 10
+    xlabel: "#eta(t,#bar{t})"
+    unit: ""
+  - name: "eta_single_top"
+    function: "X.Eta()"
+    mode: single
+    id: [6,]
+    bins: 40
+    xmin: -10
+    xmax: 10
+    xlabel: "#eta(t)"
+    unit: ""
+  - name: "eta_single_antitop"
+    function: "X.Eta()"
+    mode: single
+    id: [-6]
+    bins: 40
+    xmin: -10
+    xmax: 10
+    xlabel: "#eta(#bar{t})"
+    unit: ""
+  - name: "phi_single_tops"
+    function: "X.Phi()"
+    mode: single
+    id: [6,-6]
+    bins: 32
+    xmin: -3.14
+    xmax: 3.14
+    xlabel: "#phi(t,#bar{t})"
+    unit: ""
+  - name: "acop_pair_tops"
+    function: "1 - abs(X.Phi() - Y.Phi()) / ROOT.TMath.Pi()"
+    mode: pair
+    id: [6,-6]
+    bins: 50
+    xmin: 0.0
+    xmax: 0.005
+    xlabel: "#a(t#bar{t})"
+    unit: ""
+  - name: "delta_pt_pair_tops"
+    function: "abs(X.Pt() - Y.Pt())"
+    mode: pair
+    id: [6, -6]
+    bins: 50
+    xmin: 0.0
+    xmax: 0.5
+    xlabel: "#Delta p_{T}(t#bar{t})"
+    unit: "GeV"
+  - name: "pz_single_protons"
+    function: "X.Pz()"
+    mode: single
+    id: [2212]
+    bins: 50
+    xmin: 0
+    xmax: 7000
+    xlabel: "p_{z}(p)"
+    unit: "GeV"
+  - name: "xi_single_protons"
+    function: "1 - abs(X.Pz()) / 7000.0"
+    mode: single
+    id: [2212]
+    bins: 20
+    xmin: 0
+    xmax: 0.2
+    xlabel: "#xi(p)"
+    unit: ""
+  - name: "pt_vs_eta"
+    function: ["X.Pt()", "X.Eta()"]
+    mode: "2d"
+    id: [6, -6]
+    xbins: 50
+    xmin: 0
+    xmax: 200
+    ybins: 40
+    ymin: -5
+    ymax: 5
