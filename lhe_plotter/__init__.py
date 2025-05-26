@@ -9,7 +9,8 @@ cross-section normalization, configurable binning, batch processing, and plottin
 Modules exposed:
 - `process`: Functions for reading and filtering LHE files using `pylhe` and ROOT.
 - `histo`: Histogram creation and filling utilities.
-- `plotter_from_root`: Tools to visualize saved ROOT histograms.
+- `parser`: Processing LHE file to extract chosen variables.
+- `plotter`: Tools to visualize saved ROOT histograms.
 - `utils`: Helpers for config parsing, labeling, and normalization setup.
 """
 

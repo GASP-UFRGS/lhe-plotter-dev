@@ -28,7 +28,7 @@ def main():
     - Running in single-file or batch mode
     - Applying event cuts and weights
     - Normalizing histograms using cross sections and luminosity
-    - Automatically plotting histograms with the `plotter` module
+    - Automatically plotting histograms with the `lhe-plotter` module
 
     The command-line options allow configuration of input files, histogram definitions,
     output directories, verbosity, and plotting behavior.
@@ -45,7 +45,7 @@ def main():
     parser.add_argument("--batch", action="store_true", help="Enable batch mode over all input files")
     parser.add_argument("--outdir", default="batch_output", help="Output folder for batch mode")
     parser.add_argument("--verbose", action="store_true", help="Enable per-event logging inside batch logs")
-    parser.add_argument("--auto-plot", action="store_true", help="Automatically call plotter_from_root after filling histograms")
+    parser.add_argument("--auto-plot", action="store_true", help="Automatically call lhe-plotter after filling histograms")
 
     args = parser.parse_args()
     config = utils.load_input_file(args.input_file)

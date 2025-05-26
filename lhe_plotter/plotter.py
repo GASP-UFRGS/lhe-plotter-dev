@@ -404,7 +404,7 @@ def plot_histograms_from_root(root_file_path, input_yaml="input.dat", input_hist
     print(f"PNG plots saved to: {output_dir}/")
     print(f"Multi-page PDF saved to: {multi_pdf_path}")
 
-def main_cli():
+def main():
     """
     Entry point when plotter.py is run as a module.
     """
@@ -426,5 +426,5 @@ def main_cli():
     )
 
 if __name__ == "__main__":
-    main_cli()
+    main()
 
